@@ -82,7 +82,7 @@ public class QuizController {
                             break;
                         case "5":
                             System.out.println("### 임의숫자 맞추기 ###");
-                            feb07Service.getGuessNumber(scanner);
+                            feb07Service.updown(scanner);
                             break;
                         default:
                             System.out.println("Wrong Number");
@@ -90,12 +90,36 @@ public class QuizController {
                     }
                     break;
                 case "3":
-                    System.out.println("[소메뉴]\n 0.Exit \n1.퀵정렬 \n2.야구 \n3.좌석예약\n 4.은행 입출금\n 5.구구단");
+                    System.out.println("[소메뉴]\n 0.Exit \n1.로또 \n2.좌석예약 \n3.은행 입출금\n 4.구구단\n");
+                    switch (scanner.next()){
+                        case "0":
+                            System.out.println("### 종료 ###");return;
+                        case "1":
+                            System.out.println("### 로또 ###");
+                            feb08Service.lotto(scanner);
+                            break;
+                        case "2":
+                            System.out.println("### 좌석예약 ###");
+                            feb08Service.booking(scanner);
+                            break;
+                        case "3":
+                            System.out.println("### 입출금 ###");
+                            feb08Service.bank(scanner);
+                            break;
+                        case "4":
+                            System.out.println("### 구구단 ###");
+                            feb08Service.gugudan(scanner);
+                            break;
+                    }
+                case "4":
+                    System.out.println("[소메뉴]\n 0.Exit \n1.quick sort \n2.merge sort \n" +
+                            "3.마방진\n 4.지그재그\n 5.직삼각형 별찍기\n 6. 정삼각형 별찍기");
                     switch (scanner.next()) {
                         case "0":
                             System.out.println("### 종료 ###");
                             return;
                         case "1":
+                            System.out.println("### quick sort ###");
                             int[] arr = new int[10];
 
                             for (int i=0; i<arr.length; i++) {
@@ -109,6 +133,21 @@ public class QuizController {
                             feb10Service.quickSort(arr,0,arr.length-1);
                             feb10Service.res(arr);
                         case "2":
+                            System.out.println("### merge sort ###");
+                            int[] a = new int[10];
+                            feb10Service.mergeSort(a);
+                        case "3":
+                            System.out.println("### 마방진 ###");
+                            feb10Service.magicSquare();
+                        case "4":
+                            System.out.println("### 지그재그 ###");
+                            feb10Service.zigzag();
+                        case "5":
+                            System.out.println("### 직삼각형 별찍기 ###");
+                            feb10Service.rectangleStarPrint(scanner);
+                        case "6":
+                            System.out.println("### 정삼각형 별찍기 ###");
+                            feb10Service.triangleStarPrint(scanner);
 
                     }
 

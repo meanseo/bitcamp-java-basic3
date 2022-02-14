@@ -19,5 +19,5 @@ public interface Feb07Service {
     void getRps(Scanner scanner);
     void getPrime(Scanner scanner);
     void getLeapYear(Scanner scanner);
-    void getGuessNumber(Scanner scanner);
+    void updown(Scanner scanner);
 }

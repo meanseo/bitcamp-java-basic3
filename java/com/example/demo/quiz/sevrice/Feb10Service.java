@@ -1,5 +1,7 @@
 package com.example.demo.quiz.sevrice;
 
+import java.util.Scanner;
+
 /**
  * packageName: com.example.demo.quiz.sevrice
  * fileName   : Feb10Service
@@ -25,7 +27,7 @@ public interface Feb10Service {
     void zigzag();
     // 1인
     // 좌측90도 직각삼각형 별찍기
-    void rectangleStarPrint();
+    void rectangleStarPrint(Scanner scanner);
     // 정삼각형 별찍기
-    void triangleStarPrint();
+    void triangleStarPrint(Scanner scanner);
 }
